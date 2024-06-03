@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 03/06/2024 às 02:03
+-- Tempo de geração: 03/06/2024 às 22:25
 -- Versão do servidor: 10.4.32-MariaDB
 -- Versão do PHP: 8.0.30
 
@@ -53,7 +53,8 @@ INSERT INTO `despesas` (`id`, `user_id`, `descricao`, `valor`, `data`, `informac
 (11, 13, 'Cartão de Credito', 10000.00, '2024-06-02', 'Puta', NULL),
 (12, NULL, 'Aluguel', 350.00, '2024-06-02', NULL, 1),
 (14, 22, 'Aluguel', 123.00, '2024-06-02', 'internett', NULL),
-(15, 22, 'Água', 2134.00, '2024-06-02', '', NULL);
+(15, 22, 'Água', 2134.00, '2024-06-02', '', NULL),
+(16, 25, 'Aluguel', 1000.00, '2024-06-03', 'Aluguel casa', NULL);
 
 -- --------------------------------------------------------
 
@@ -100,12 +101,11 @@ CREATE TABLE `usuarios` (
 --
 
 INSERT INTO `usuarios` (`id`, `nome`, `email`, `senha`, `cpf`, `data_nascimento`, `salario_liquido`, `biografia`, `descricao`, `foto`, `perfil_completo`) VALUES
-(2, 'Kauan Lauer', 'erickkauanlauer@gmail.com', '123456', '10825732999', '1998-08-24', 1900.00, 'Criador desse site', 'teste para descrição de perfil', '665d07b148f15-665d0692ba457-61U0FIe2itL._AC_UF894,1000_QL80_.jpg', 1),
+(2, 'Kauan Lauer', 'erickkauanlauer@gmail.com', '123456', '123456789', '1998-08-24', 1900.00, 'Criador desse site', 'teste para descrição de perfil', '665d07b148f15-665d0692ba457-61U0FIe2itL._AC_UF894,1000_QL80_.jpg', 1),
 (8, 'Alex kaue', 'laueralex765@gmail.com', 'alex3.', '', '0000-00-00', 1620.00, '', '', NULL, 0),
 (13, 'carlos rodrigues', 'carlos@gmail.com', '1234', NULL, NULL, NULL, NULL, NULL, NULL, 0),
-(20, 'Kauan Lauer', 'erickkauanlauer1@gmail.com', '123456', '10825732999', '1198-08-24', 1900.00, 'teste', 'teste', '665d0692ba457-61U0FIe2itL._AC_UF894,1000_QL80_.jpg', 1),
-(21, 'Kauan Lauer', 'erickkauanlauer2@gmail.com', '123456', '10825732999', '1998-08-24', 1900.00, 'teste', 'teste', '665d079c30438-665d0692ba457-61U0FIe2itL._AC_UF894,1000_QL80_.jpg', 1),
-(22, 'bruno', 'egel@gmail.com', '1234', '1234566890', '0000-00-00', 1222.00, '', '', '665d081e2faa7-download.jpeg', 1);
+(22, 'bruno', 'egel@gmail.com', '1234', '1234566890', '0000-00-00', 1222.00, '', '', '665d081e2faa7-download.jpeg', 1),
+(25, 'Matheus Albuquerque ', 'matheus.albuquerque@manupackaging.com.br', 'Teste12345', '', '0000-00-00', 0.00, '', '', '665e1cf346b45-user.png', 1);
 
 -- --------------------------------------------------------
 
@@ -160,7 +160,7 @@ ALTER TABLE `usuario_grupo`
 -- AUTO_INCREMENT de tabela `despesas`
 --
 ALTER TABLE `despesas`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT de tabela `grupos`
@@ -172,7 +172,7 @@ ALTER TABLE `grupos`
 -- AUTO_INCREMENT de tabela `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id` int(16) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+  MODIFY `id` int(16) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
 
 --
 -- AUTO_INCREMENT de tabela `usuario_grupo`
