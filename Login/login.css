@@ -1,0 +1,119 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background: #007bff60;
+    margin: 0;
+    padding: 0;
+    color: #000000;
+    display: flex;
+    justify-content: space-around;
+}
+
+.container {
+    width: 45%;
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.24);
+    color: #000000;
+}
+
+.slideshow {
+    width: 45%;
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    color: #000000;
+    /* Adicione o código do slideshow aqui */
+}
+
+
+.container form {
+    margin-top: 20px;
+}
+
+.container form p {
+    margin-bottom: 15px;
+}
+
+.container form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.container form input[type="text"],
+.container form input[type="password"],
+.container form input[type="email"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    background-color: #007bff57;
+    color: #000000;
+}
+
+.container form input[type="text"]::placeholder,
+.container form input[type="password"]::placeholder,
+.container form input[type="email"]::placeholder {
+    color: #bbb;
+}
+
+.container form button,
+.container form a.button {
+    display: inline-block;
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(to right, #007bff, #4ca1af);
+    border: none;
+    border-radius: 70px;
+    color: #f4f4f4;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.container form button:hover,
+.container form a.button:hover {
+    background-color: #0056b3;
+}
+
+.error-message {
+    color: #ff0000;
+    font-size: 14px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.link-cadastro {
+    color: rgb(0, 115, 209);
+}
+
+.button_voltar {
+    margin-top: 15px;
+    display: inline-block;
+    width: 93%;
+    padding: 15px;
+    background: linear-gradient(to right, #007bff, #4ca1af);
+    border: none;
+    border-radius: 70px;
+    color: #f4f4f4;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.senha{
+font-size: 10px;
+margin: 0;
+}

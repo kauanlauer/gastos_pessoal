@@ -1,0 +1,117 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body, html {
+    height: 100%;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #222;
+    color: #fff;
+    overflow: hidden;
+}
+
+.container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    text-align: center;
+    padding: 20px;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    width: 98%;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    z-index: 3;
+}
+
+.logo img {
+    width: 50px;
+}
+
+nav {
+    gap: 20px;
+}
+
+.btn {
+    background: #007bff;
+    color: #fff;
+    padding: 10px 10px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: background 0.3s, transform 0.3s;
+
+}
+
+.btn:hover {
+    background: #0056b3;
+    transform: scale(1.05);
+}
+
+main {
+    z-index: 2;
+    backdrop-filter: blur(10px);
+    padding: 30px;
+    border-radius: 15px;
+    background: rgba(0, 0, 0, 0.5);
+    max-width: 800px;
+    text-align: center;
+}
+
+h1 {
+    color: #fff;
+    margin-bottom: 20px;
+    font-size: 3em;
+}
+
+p {
+    color: #ddd;
+    font-size: 1.5em;
+    margin-bottom: 30px;
+}
+
+.slideshow-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.mySlides {
+    display: none;
+}
+
+.mySlides img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}

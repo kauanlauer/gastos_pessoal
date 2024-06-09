@@ -1,0 +1,84 @@
+/* Menu Lateral */
+nav.menu-lateral {
+    width: 65px;
+    height: 100%;
+    background-color: #2d3c4b;
+    padding: 40px 0 40px 1%;
+    box-shadow: 7px 0 0 #46bbdc;
+    position: fixed;  /* deixar menu fixado */
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    transition: width 0.5s;
+    z-index: 1000;
+}
+
+nav.menu-lateral.expandir {
+    width: 200px;
+}
+
+.bt-expandir {
+    width: 100%;
+    padding-left: 2px;
+}
+
+.bt-expandir > i {
+    color: aliceblue;
+    font-size: 35px;
+    cursor: pointer;
+}
+
+ul {
+    height: 100%;
+    list-style-type: none;
+}
+
+ul li.item-menu {
+    transition: background-color 0.3s;
+}
+
+ul li.ativo {
+    background-color: #46bbdc;
+}
+
+ul li.item-menu:hover {
+    background-color: #46bbdc;
+}
+
+ul li.item-menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px 1%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    transition: background-color 0.3s;
+}
+
+ul li.item-menu a .txt-link {
+    margin-left: 20px;
+    transition: opacity 0.5s, margin-left 0.5s;
+    opacity: 0;
+}
+
+nav.menu-lateral.expandir .txt-link {
+    margin-left: 15px;
+    opacity: 1;
+}
+
+ul li.item-menu a .icon > i {
+    font-size: 24px;
+    margin-left: 10px;
+}
+
+.icon {
+    min-width: 35px;
+    text-align: center;
+}
+
+/* Container Principal */
+.container {
+    margin-left: 75px;
+    padding: 20px;
+}

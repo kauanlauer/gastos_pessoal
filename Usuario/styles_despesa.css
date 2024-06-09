@@ -1,0 +1,264 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+.navbar {
+    background: #007bff; /* Cor de fundo azul para a barra de navegação */
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar a {
+    float: left;
+    display: block;
+    color: #fff; /* Cor do texto na barra de navegação */
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.navbar a:hover {
+    background-color: #0056b3; /* Cor de destaque ao passar o mouse */
+}
+
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px 30px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+.error-message {
+    color: #ff0000;
+    text-align: center;
+    margin-bottom: 20px;
+}
+form p {
+    margin-bottom: 15px;
+}
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+    font-weight: bold;
+}
+elect,
+input[type="text"],
+input[type="date"],
+input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+}
+
+select:focus,
+input[type="text"]:focus,
+input[type="date"]:focus,
+input[type="number"]:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#outra_descricao {
+    margin-top: 10px;
+}
+
+
+#descricao {
+    width: 200px;
+    height: 35px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    padding: 5px;
+    font-size: 16px;
+}
+
+
+@media (max-width: 600px) {
+    .container {
+        margin: 20px;
+        padding: 15px;
+    }
+
+    button {
+        padding: 8px;
+        font-size: 14px;
+    }
+}
+
+.profile-photo-small {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.profile-container {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background: #007bff; /* Cor de fundo azul para a barra lateral */
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidebar a {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #fff; /* Cor do texto na barra lateral */
+    display: block;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    background-color: #0056b3; /* Cor de destaque ao passar o mouse */
+}
+
+
+
+.openbtn {
+    width: 10%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.openbtn:hover {
+    background-color: #0056b3; /* Cor de destaque ao passar o mouse */
+}
+
+.main-content {
+    transition: margin-left .5s;
+    padding: 20px;
+}
+
+
+/* Parte do perfil. */
+.profile-container {
+    position: fixed;
+    top: 20px; /* Ajuste conforme necessário */
+    right: 20px; /* Ajuste conforme necessário */
+}
+
+.profile-container a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #333; /* Cor do texto */
+}
+
+.username {
+    margin-left: 10px; /* Espaçamento entre a foto e o nome de usuário */
+}
+
+.profile-photo-small {
+    width: 40px; /* Tamanho da foto */
+    height: 40px; /* Tamanho da foto */
+    border-radius: 50%; /* Forma da borda */
+    cursor: pointer; /* Transforma o cursor em um ponteiro ao passar sobre a foto */
+}
+
+.modal {
+    display: none;
+    position: absolute;
+    top: 70px; /* Posição vertical do modal */
+    right: 10px; /* Posição horizontal do modal */
+    width: 200px; /* Largura do modal */
+    background-color: #f8f9fa;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.3s ease-in-out; /* Animação de fade in */
+}
+
+.modal-content {
+    padding: 20px;
+}
+
+.close {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    font-size: 24px;
+    color: #888; /* Cor do ícone de fechar */
+    cursor: pointer;
+}
+
+.close:hover {
+    color: #333; /* Cor do ícone de fechar ao passar o mouse */
+}
+
+.modal-link {
+    color: #007bff; /* Cor dos links no modal */
+    text-decoration: none;
+    transition: color 0.3s ease; /* Transição suave da cor do texto */
+}
+
+.modal-link:hover {
+    color: #0056b3; /* Cor dos links no modal ao passar o mouse */
+}
+
+/* Animação de fade in */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Parte do perfil. */
+

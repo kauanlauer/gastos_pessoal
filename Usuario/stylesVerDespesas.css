@@ -1,0 +1,281 @@
+/* Estilos Globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Outfit', sans-serif;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: #f8f9fa; /* Fundo suave */
+    color: #343a40; /* Cor do texto principal */
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+/* Fotos de Perfil */
+.profile-photo-small {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.profile-container {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+}
+
+.profile-container a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #333; /* Cor do texto */
+}
+
+.username {
+    margin-left: 10px; /* Espaçamento entre a foto e o nome de usuário */
+}
+
+.profile-photo-small {
+    width: 40px; /* Tamanho da foto */
+    height: 40px; /* Tamanho da foto */
+    border-radius: 50%; /* Forma da borda */
+    cursor: pointer; /* Transforma o cursor em um ponteiro ao passar sobre a foto */
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: absolute;
+    top: 70px; /* Posição vertical do modal */
+    right: 10px; /* Posição horizontal do modal */
+    width: 200px; /* Largura do modal */
+    background-color: #f8f9fa;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.3s ease-in-out; /* Animação de fade in */
+}
+
+.modal-content {
+    padding: 20px;
+}
+
+.close {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    font-size: 24px;
+    color: #888; /* Cor do ícone de fechar */
+    cursor: pointer;
+}
+
+.close:hover {
+    color: #333; /* Cor do ícone de fechar ao passar o mouse */
+}
+
+.modal-link {
+    color: #007bff; /* Cor dos links no modal */
+    text-decoration: none;
+    transition: color 0.3s ease; /* Transição suave da cor do texto */
+}
+
+.modal-link:hover {
+    color: #0056b3; /* Cor dos links no modal ao passar o mouse */
+}
+
+/* Animação de fade in */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Menu Lateral */
+nav.menu-lateral {
+    width: 65px;
+    height: 100%;
+    background-color: #2d3c4b;
+    padding: 40px 0 40px 1%;
+    box-shadow: 7px 0 0 #46bbdc;
+    position: fixed;  /* deixar menu fixado */
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    transition: .5s;
+}
+
+nav.menu-lateral.expandir {
+    width: 170px;
+}
+
+.bt-expandir {
+    width: 100%;
+    padding-left: 2px;
+}
+
+.bt-expandir > i {
+    color: aliceblue;
+    font-size: 35px;
+    cursor: pointer;
+}
+
+ul {
+    height: 100%;
+    list-style-type: none;
+}
+
+ul li.item-menu {
+    transition: .3s;
+}
+
+ul li.ativo {
+    background-color: #46bbdc;
+}
+
+ul li.item-menu:hover {
+    background-color: #46bbdc;
+}
+
+ul li.item-menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+    padding: 7px 1%;
+    display: flex;
+    margin-bottom: 10px;
+    line-height: 25px;
+}
+
+ul li.item-menu a .txt-link {
+    margin-left: 30px;
+    transition: 1.2s;
+    opacity: 0;
+}
+
+nav.menu-lateral.expandir .txt-link {
+    margin-left: 12px;
+    opacity: 1;
+}
+
+ul li.item-menu a .icon > i {
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+
+/* Estilos para o formulário */
+.container {
+    margin-top: 10px;
+    padding-left: 30px; /* Adiciona um padding à esquerda para deixar um espaço entre o conteúdo e a margem da tela */
+    padding-right: 10px; /* Adiciona um padding à direita para deixar um espaço entre o conteúdo e a margem da tela */
+    max-width: 900px; /* Define a largura máxima do container para limitar o tamanho do formulário */
+    margin-left: auto; /* Centraliza o container na tela */
+    margin-right: auto; /* Centraliza o container na tela */
+}
+
+.container h1 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+form {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+form label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+form input[type="date"],
+form input[type="text"],
+form input[type="number"],
+form button[type="submit"],
+form .btn_add_despesa {
+    width: 50%; /* Define a largura dos campos de entrada e botões para ocupar toda a largura do container */
+    padding: 5px;
+    margin-bottom: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+form button[type="submit"],
+form .btn_add_despesa {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s;
+}
+
+form button[type="submit"]:hover,
+form .btn_add_despesa:hover {
+    background-color: #0056b3;
+}
+
+/* Estilos para a tabela */
+table {
+    width: 70%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table th, table td {
+    padding: 10px;
+    text-align: right;
+    border-bottom: px solid #ddd;
+}
+
+table th {
+    background-color: #f2f2f2;
+}
+
+/* Estilos para os botões de ação na tabela */
+.btn {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.btn-edit {
+    background-color: #007bff;
+    color: white;
+}
+
+.btn-delete {
+    background-color: #dc3545;
+    color: white;
+}
+
+.btn:hover {
+    opacity: 0.8;
+}
+
+/* Media query para dispositivos móveis */
+@media (max-width: 768px) {
+    .container {
+        padding-left: 10px; /* Reduz o padding à esquerda para melhor ajuste em dispositivos móveis */
+        padding-right: 10px; /* Reduz o padding à direita para melhor ajuste em dispositivos móveis */
+        margin-top: 90px; /* Aumenta a margem superior para evitar sobreposição com o menu */
+    }
+}
