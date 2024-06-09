@@ -1,0 +1,144 @@
+/* Estilos gerais */
+body {
+    font-family: 'Roboto', sans-serif;
+    background: #f8f9fa;
+    color: #343a40;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos do menu lateral */
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background: #007bff;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidebar a {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #fff;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    background-color: #0056b3;
+}
+
+.openbtn {
+    width: 10%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.openbtn:hover {
+    background-color: #0056b3;
+}
+
+.main-content {
+    transition: margin-left .5s;
+    padding: 20px;
+}
+
+/* Estilos do perfil */
+.profile-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+}
+
+.profile-container a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+}
+
+.username {
+    margin-left: 10px;
+}
+
+.profile-photo-small {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* Estilos do modal */
+.modal {
+    display: none;
+    position: absolute;
+    top: 70px;
+    right: 10px;
+    width: 200px;
+    background-color: #f8f9fa;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.modal-content {
+    padding: 20px;
+}
+
+.close {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    font-size: 24px;
+    color: #888;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: #333;
+}
+
+.modal-link {
+    color: #0056b3;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.modal-link:hover {
+    color: #0056b3;
+}
+
+.modal-link_sair {
+    color: #0056b3;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.modal-link_sair:hover {
+    color: #0056b3;
+}
+
+/* Animação de fade in */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
